@@ -1,12 +1,14 @@
 #include <iostream>
 #include <GL/glew.h>
 #include <SDl.h>
+#include <glm/vec3.hpp>
 #include <SDL_opengl.h>
 
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
+  glm::vec3 test;
   SDL_Init(SDL_INIT_VIDEO);
 
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);

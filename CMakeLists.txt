@@ -12,7 +12,8 @@ find_package(GLEW REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR}
         ${SDL2_IMAGE_INCLUDE_DIR}
         ${SDL2_TTF_INCLUDE_DIR}
-        ${GLEW_INCLUDE_DIRS})
+        ${GLEW_INCLUDE_DIRS}
+        "lib/glm/")
 
 set(SOURCE_FILES main.cpp)
 add_executable(EnginePlayground ${SOURCE_FILES})
