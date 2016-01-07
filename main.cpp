@@ -1,4 +1,5 @@
 #include <iostream>
+#include <GL/glew.h>
 #include <SDl.h>
 #include <SDL_opengl.h>
 
@@ -16,6 +17,14 @@ int main(int argc, char *argv[]) {
                                         SDL_WINDOW_OPENGL);
 
   SDL_GLContext context = SDL_GL_CreateContext(window);
+
+  glewExperimental = GL_TRUE;
+  glewInit();
+
+  GLuint vertexBuffer;
+  glGenBuffers(1, &vertexBuffer);
+
+  printf("%u\n", vertexBuffer);
 
   SDL_Event event;
 
