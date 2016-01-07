@@ -20,4 +20,5 @@ add_executable(EnginePlayground ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY}
         ${SDL2_IMAGE_LIBRARIES}
         ${SDL2_TTF_LIBRARIES}
+        ${GLEW_LIBRARIES}
         ${GLEW_INCLUDE_DIRS})
