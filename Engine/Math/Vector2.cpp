@@ -32,3 +32,4 @@ Engine::Vector2 Engine::Vector2::operator-(const Engine::Vector2 &rhs) const {
 
   return newVector;
 }
+
