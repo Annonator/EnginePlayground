@@ -5,21 +5,23 @@
 #include "gtest/gtest.h"
 #include "Math/Vector2.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
 using namespace Engine;
 
 TEST(engine_test_math_vector2, test_standardcons_vector2) {
-  Vector2 *testVector = new Engine::Vector2();
+  Vector2 testVector;
 
-  EXPECT_EQ(testVector->x, 1.0);
-  EXPECT_EQ(testVector->y, 1.0);
+  EXPECT_EQ(1.0, testVector.x);
+  EXPECT_EQ(1.0, testVector.y);
 }
 
 
 TEST(engine_test_math_vector2, test_cons_vector2) {
   Vector2 testVector(2.0, 3.0);
 
-  EXPECT_EQ(testVector.x, 2.0);
-  EXPECT_EQ(testVector.y, 3.0);
+  EXPECT_EQ(2.0, testVector.x);
+  EXPECT_EQ(3.0, testVector.y);
 }
 
 TEST(engine_test_math_vector2, overload_add) {
@@ -27,9 +29,9 @@ TEST(engine_test_math_vector2, overload_add) {
   Vector2 rhs(2.0, 2.0);
   Vector2 controll(3.0, 3.0);
 
-  EXPECT_TRUE(((rhs+lhs) == controll));
-  EXPECT_TRUE(((lhs+rhs) == controll));
-  EXPECT_TRUE(((lhs+lhs+rhs) == (lhs+rhs+lhs)));
+  EXPECT_TRUE(((rhs + lhs) == controll));
+  EXPECT_TRUE(((lhs + rhs) == controll));
+  EXPECT_TRUE(((lhs + lhs + rhs) == (lhs + rhs + lhs)));
   EXPECT_FALSE(((lhs + rhs) == (controll + rhs)));
 }
 
@@ -44,3 +46,5 @@ TEST(engine_test_math_vector2, overload_add_scalar) {
   EXPECT_FALSE(10 + lhs == 5 + lhs);
   EXPECT_FALSE(20 + lhs == controll);
 }
+
+#pragma clang diagnostic pop
