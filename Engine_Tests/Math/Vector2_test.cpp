@@ -24,6 +24,20 @@ TEST(engine_test_math_vector2, test_cons_vector2) {
   EXPECT_EQ(3.0, testVector.y);
 }
 
+
+TEST(engine_test_math_vector2, test_equal_Test) {
+  Vector2 lhs(1.0, 1.0);
+  Vector2 rhs(1.0, 1.0);
+
+  EXPECT_EQ(lhs, rhs);
+  EXPECT_EQ(rhs, lhs);
+
+  rhs.x = 10.0;
+
+  EXPECT_NE(lhs, rhs);
+  EXPECT_NE(rhs, lhs);
+}
+
 TEST(engine_test_math_vector2, overload_add) {
   Vector2 lhs(1.0, 1.0);
   Vector2 rhs(2.0, 2.0);
@@ -34,7 +48,6 @@ TEST(engine_test_math_vector2, overload_add) {
   EXPECT_TRUE(((lhs + lhs + rhs) == (lhs + rhs + lhs)));
   EXPECT_FALSE(((lhs + rhs) == (control + rhs)));
 }
-
 
 TEST(engine_test_math_vector2, overload_add_scalar) {
   Vector2 lhs(1.0, 1.0);

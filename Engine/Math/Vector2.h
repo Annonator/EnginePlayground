@@ -18,6 +18,10 @@ class Vector2 {
     return this->x == rhs.x && this->y == rhs.y;
   }
 
+  bool operator!=(const Vector2 &rhs) const {
+    return this->x != rhs.x || this->y != rhs.y;
+  }
+
 
   friend Vector2 operator+(const Vector2 &v, const float scalar) {
     return Vector2(v.x + scalar, v.y + scalar);
@@ -33,7 +37,7 @@ class Vector2 {
 
   Vector2 operator-(const Vector2 &rhs) const {
     return Vector2(this->x - rhs.x, this->y - rhs.y);
-  };
+  }
 };
 }
 
