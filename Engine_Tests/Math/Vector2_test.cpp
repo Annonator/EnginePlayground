@@ -27,12 +27,12 @@ TEST(engine_test_math_vector2, test_cons_vector2) {
 TEST(engine_test_math_vector2, overload_add) {
   Vector2 lhs(1.0, 1.0);
   Vector2 rhs(2.0, 2.0);
-  Vector2 controll(3.0, 3.0);
+  Vector2 control(3.0, 3.0);
 
-  EXPECT_TRUE(((rhs + lhs) == controll));
-  EXPECT_TRUE(((lhs + rhs) == controll));
+  EXPECT_TRUE(((rhs + lhs) == control));
+  EXPECT_TRUE(((lhs + rhs) == control));
   EXPECT_TRUE(((lhs + lhs + rhs) == (lhs + rhs + lhs)));
-  EXPECT_FALSE(((lhs + rhs) == (controll + rhs)));
+  EXPECT_FALSE(((lhs + rhs) == (control + rhs)));
 }
 
 
