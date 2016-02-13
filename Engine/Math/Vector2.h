@@ -15,30 +15,30 @@ class Vector2 {
   Vector2(float _x, float _y);
 
   //Accessor
-  float &operator[](unsigned int index) { return (&(this->x))[index]; }
-  float operator[](unsigned int index) const { return (&(this->x))[index]; }
+  inline float &operator[](unsigned int index) { return (&(this->x))[index]; }
+  inline float operator[](unsigned int index) const { return (&(this->x))[index]; }
 
   float Length() const;
 
   //Compare
-  bool operator==(const Vector2 &rhs) const { return this->x == rhs.x && this->y == rhs.y; }
-  bool operator!=(const Vector2 &rhs) const { return this->x != rhs.x || this->y != rhs.y; }
+  bool operator==(const Vector2 &rhs) const;
+  bool operator!=(const Vector2 &rhs) const;
 
   //Addition / Substraction
   friend Vector2 operator+(const Vector2 &v, const float scalar) { return Vector2(v.x + scalar, v.y + scalar); }
   friend Vector2 operator+(const float scalar, const Vector2 &v) { return (v + scalar); }
-  Vector2 operator+(const Vector2 &rhs) const { return Vector2(this->x + rhs.x, this->y + rhs.y); }
+  Vector2 operator+(const Vector2 &rhs) const;
   Vector2 &operator+=(const Vector2 &rhs);
 
-  Vector2 operator-(const Vector2 &rhs) const { return Vector2(this->x - rhs.x, this->y - rhs.y); }
+  Vector2 operator-(const Vector2 &rhs) const;
   Vector2 &operator-=(const Vector2 &rhs);
 
   //Scalar Multiplication
-  Vector2 operator*(const float scalar) const { return Vector2(this->x * scalar, this->y * scalar); }
+  Vector2 operator*(const float scalar) const;
   friend Vector2 operator*(const float scalar, const Vector2 &rhs) { return Vector2(scalar * rhs.x, scalar * rhs.y); }
   Vector2 &operator*=(const float scalar);
 
-  Vector2 operator/(const float scalar) const { return Vector2(this->x / scalar, this->y / scalar); }
+  Vector2 operator/(const float scalar) const;
   Vector2 &operator/=(const float scalar);
 
   //Vector specific
