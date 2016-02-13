@@ -17,9 +17,7 @@ class Vector2 {
   float &operator[](unsigned int index) { return (&(this->x))[index]; }
   float operator[](unsigned int index) const { return (&(this->x))[index]; }
 
-  bool operator==(const Vector2 &rhs) const {
-    return this->x == rhs.x && this->y == rhs.y;
-  }
+  bool operator==(const Vector2 &rhs) const { return this->x == rhs.x && this->y == rhs.y; }
 
   bool operator!=(const Vector2 &rhs) const { return this->x != rhs.x || this->y != rhs.y; }
 
