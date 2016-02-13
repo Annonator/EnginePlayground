@@ -27,6 +27,14 @@ bool Vector2::operator!=(const Vector2 &rhs) const {
   return this->x != rhs.x || this->y != rhs.y;
 }
 
+Vector2 Engine::operator+(const Vector2 &v, const float scalar) {
+  return Vector2(v.x + scalar, v.y + scalar);
+}
+
+Vector2 Engine::operator+(const float scalar, const Vector2 &v) {
+  return (v + scalar);
+}
+
 Vector2 Vector2::operator+(const Vector2 &rhs) const {
   return Vector2(this->x + rhs.x, this->y + rhs.y);
 }
@@ -53,6 +61,9 @@ Vector2 Vector2::operator*(const float scalar) const {
   return Vector2(this->x * scalar, this->y * scalar);
 }
 
+Vector2 Engine::operator*(const float scalar, const Vector2 &rhs) {
+  return Vector2(scalar * rhs.x, scalar * rhs.y);
+}
 
 Vector2 &Vector2::operator*=(const float scalar) {
   this->x *= scalar;
