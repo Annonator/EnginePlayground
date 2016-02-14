@@ -27,7 +27,7 @@ Vector3 Vector3::operator+(const Vector3 &other) const {
   return Vector3((this->x + other.x), (this->y + other.y), (this->z + other.z));
 }
 
-Vector3 &Vector3::operator+=(Vector3 &rhs) {
+Vector3 &Vector3::operator+=(const Vector3 &rhs) {
   this->x += rhs.x;
   this->y += rhs.y;
   this->z += rhs.z;
@@ -73,4 +73,10 @@ Vector3 &Vector3::operator/=(const float scalar) {
   this->z /= scalar;
 
   return *this;
+}
+
+void Vector3::Set(float x, float y, float z) {
+  this->x = x;
+  this->y = y;
+  this->z = z;
 }

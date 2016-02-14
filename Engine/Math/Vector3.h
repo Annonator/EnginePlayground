@@ -28,7 +28,7 @@ class Vector3 {
 
   //Addition / Subtraction
   Vector3 operator+(const Vector3 &other) const;
-  Vector3 &operator+=(Vector3 &rhs);
+  Vector3 &operator+=(const Vector3 &rhs);
   Vector3 operator-(const Vector3 &other) const;
   Vector3 &operator-=(const Vector3 &rhs);
 
@@ -49,6 +49,7 @@ class Vector3 {
     return Vector3(vector.x / scalar, vector.y / scalar, vector.z / scalar);
   }
   Vector3 &operator/=(const float scalar);
+  void Set(float x, float y, float z);
 };
 }
 
