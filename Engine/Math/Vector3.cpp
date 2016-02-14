@@ -55,10 +55,6 @@ Vector3 Vector3::operator*(const float scalar) const {
   return Vector3(this->x * scalar, this->y * scalar, this->z * scalar);
 }
 
-Vector3 Engine::operator*(const float scalar, const Vector3 &vector) {
-  return Vector3(vector.x * scalar, vector.y * scalar, vector.z * scalar);
-}
-
 Vector3 &Vector3::operator*=(const float scalar) {
   this->x *= scalar;
   this->y *= scalar;
@@ -69,10 +65,6 @@ Vector3 &Vector3::operator*=(const float scalar) {
 
 Vector3 Vector3::operator/(const float scalar) const {
   return Vector3(this->x / scalar, this->y / scalar, this->z / scalar);
-}
-
-Vector3 Engine::operator/(const float scalar, const Vector3 &vector) {
-  return Vector3(vector.x / scalar, vector.y / scalar, vector.z / scalar);
 }
 
 Vector3 &Vector3::operator/=(const float scalar) {

@@ -25,8 +25,8 @@ class Vector2 {
   bool operator!=(const Vector2 &rhs) const;
 
   //Addition / Subtraction
-  friend Vector2 operator+(const Vector2 &v, const float scalar);
-  friend Vector2 operator+(const float scalar, const Vector2 &v);
+  friend Vector2 operator+(const Vector2 &v, const float scalar) { return Vector2(v.x + scalar, v.y + scalar); }
+  friend Vector2 operator+(const float scalar, const Vector2 &v) { return (v + scalar); }
   Vector2 operator+(const Vector2 &rhs) const;
   Vector2 &operator+=(const Vector2 &rhs);
 
@@ -35,7 +35,7 @@ class Vector2 {
 
   //Scalar Multiplication
   Vector2 operator*(const float scalar) const;
-  friend Vector2 operator*(const float scalar, const Vector2 &rhs);
+  friend Vector2 operator*(const float scalar, const Vector2 &rhs) { return Vector2(scalar * rhs.x, scalar * rhs.y); }
   Vector2 &operator*=(const float scalar);
 
   Vector2 operator/(const float scalar) const;
