@@ -6,9 +6,13 @@
 #define ENGINEPLAYGROUND_RENDEREROGL_H
 
 
-namespace Engine {
-class RendererOGL {
+#include <Render/Renderer.h>
 
+namespace Engine {
+class RendererOGL: public Renderer {
+
+ public:
+  virtual void init(unsigned int width, unsigned int height) override;
 };
 }
 

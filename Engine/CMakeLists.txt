@@ -13,7 +13,7 @@ include_directories(${SDL2_INCLUDE_DIR}
         ${SDL2_TTF_INCLUDE_DIR}
         ${GLEW_INCLUDE_DIRS})
 
-set(SOURCE_FILES Render/RenderBuildExample.cpp Render/RenderBuildExample.h Math/Vector2.cpp Math/Vector2.h Math/Vector3.cpp Math/Vector3.h Render/Renderer.cpp Render/Renderer.h Render/OGL/RendererOGL.cpp Render/OGL/RendererOGL.h)
+set(SOURCE_FILES Render/RenderBuildExample.cpp Render/RenderBuildExample.h Math/Vector2.cpp Math/Vector2.h Math/Vector3.cpp Math/Vector3.h Render/Renderer.cpp Render/Renderer.h Render/OGL/RendererOGL.cpp Render/OGL/RendererOGL.h Engine/BaseGame.cpp Engine/BaseGame.h)
 add_library(Engine STATIC ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY}
