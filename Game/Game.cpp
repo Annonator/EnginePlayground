@@ -4,3 +4,12 @@
 
 #include <iostream>
 #include "Game.h"
+Game::~Game() {
+
+}
+void Game::UpdateSimulation(float deltaTime) {
+
+}
+void Game::Render() {
+
+}

@@ -9,7 +9,12 @@
 
 class Game : public Engine::BaseGame{
  public:
+  Game(Engine::Time &time) : BaseGame(time) { };
+  ~Game();
 
+ protected:
+  virtual void UpdateSimulation(float deltaTime);
+  virtual void Render();
 };
 
 
