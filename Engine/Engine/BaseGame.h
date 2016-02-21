@@ -8,15 +8,10 @@
 namespace Engine {
 class BaseGame {
  public:
-
-  static BaseGame *game;
  protected:
-  BaseGame();
+  virtual BaseGame();
   virtual ~BaseGame();
-
 };
-//non-const static data member must be initialized out of line
-BaseGame *BaseGame::game = nullptr;
 }
 
 
