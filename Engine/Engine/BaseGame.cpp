@@ -3,7 +3,6 @@
 //
 
 #include <stdlib.h>
-#include <iostream>
 #include "BaseGame.h"
 #include "Clock.h"
 
@@ -16,8 +15,6 @@ Engine::BaseGame::~BaseGame() {
 }
 
 void Engine::BaseGame::Update() {
-  std::cout << this->gameClock->GetElapsedTime() << "\n";
-
   if(this->quit){
     exit(0);
   }
