@@ -10,6 +10,10 @@ namespace Engine {
 class Renderer {
  public:
   virtual void init(unsigned int width, unsigned int height) = 0;
+
+ protected:
+  unsigned int widht;
+  unsigned int height;
 };
 }
 
