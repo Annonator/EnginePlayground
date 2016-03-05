@@ -5,12 +5,11 @@
 #ifndef ENGINEPLAYGROUND_BASEGAME_H
 #define ENGINEPLAYGROUND_BASEGAME_H
 
-#include <Platform/Time.h>
-
 namespace Engine {
 
 //Forward Declaration
 class Clock;
+class Time;
 
 class BaseGame {
  public:
