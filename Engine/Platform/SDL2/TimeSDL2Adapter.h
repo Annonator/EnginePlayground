@@ -8,12 +8,12 @@
 
 #include <Platform/Time.h>
 
-namespace Engine{
-class TimeSDL2Adapter: public Engine::Time{
+namespace Engine {
+class TimeSDL2Adapter: public Engine::Time {
  public:
   TimeSDL2Adapter();
   ~TimeSDL2Adapter();
-  virtual unsigned int GetTime();
+  virtual unsigned int GetTime() override;
 };
 }
 
