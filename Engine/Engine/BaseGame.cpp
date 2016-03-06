@@ -24,7 +24,6 @@ void Engine::BaseGame::Update() {
   }
 
   this->gameClock->Update();
-
   this->UpdateSimulation(this->gameClock->GetElapsedTime());
 }
 

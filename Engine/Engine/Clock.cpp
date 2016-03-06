@@ -13,7 +13,7 @@ Engine::Clock::~Clock() {
 }
 
 void Engine::Clock::Update() {
-  unsigned int deltaTmp = this->time.GetTime();
+  float deltaTmp = ((float)this->time.GetTime()) * 0.001f;
   this->elapsedTime = deltaTmp - this->currentTime;
   this->currentTime = deltaTmp;
 }

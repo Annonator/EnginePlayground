@@ -10,12 +10,15 @@ Engine::WindowOGLAdapter::WindowOGLAdapter() : Window() {
 }
 
 Engine::WindowOGLAdapter::~WindowOGLAdapter() {
-  delete this->window;
+  SDL_GL_DeleteContext(this->context);
+  SDL_Quit();
+
 }
 
 bool Engine::WindowOGLAdapter::initWindow() {
   if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
     printf("SDL_Init failed: %s\n", SDL_GetError());
+    return false;
   }
 
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
@@ -27,5 +30,5 @@ bool Engine::WindowOGLAdapter::initWindow() {
 
   this->context = SDL_GL_CreateContext(this->window);
 
-  return false;
+  return true;
 }
