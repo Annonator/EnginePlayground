@@ -16,7 +16,7 @@ include_directories(${SDL2_INCLUDE_DIR}
         ${GLEW_INCLUDE_DIRS})
 
 
-set(SOURCE_FILES Render/RenderBuildExample.cpp Render/RenderBuildExample.h Math/Vector2.cpp Math/Vector2.h Math/Vector3.cpp Math/Vector3.h Render/Renderer.cpp Render/Renderer.h Engine/BaseGame.cpp Engine/BaseGame.h Engine/Clock.cpp Engine/Clock.h Platform/Time.h Platform/SDL2/TimeSDL2Adapter.cpp Platform/SDL2/TimeSDL2Adapter.h Render/OGL/RendererOGLAdapter.cpp Render/OGL/RendererOGLAdapter.h Render/Window.cpp Render/Window.h Render/OGL/WindowOGLAdapter.cpp Render/OGL/WindowOGLAdapter.h Platform/GLFW/TimeGLFWAdapter.cpp Platform/GLFW/TimeGLFWAdapter.h)
+set(SOURCE_FILES Render/RenderBuildExample.cpp Render/RenderBuildExample.h Math/Vector2.cpp Math/Vector2.h Math/Vector3.cpp Math/Vector3.h Render/Renderer.cpp Render/Renderer.h Engine/BaseGame.cpp Engine/BaseGame.h Engine/Clock.cpp Engine/Clock.h Platform/Time.h Platform/SDL2/TimeSDL2Adapter.cpp Platform/SDL2/TimeSDL2Adapter.h Render/OGL/RendererOGLAdapter.cpp Render/OGL/RendererOGLAdapter.h Platform/Window.cpp Platform/Window.h Platform/GLFW/TimeGLFWAdapter.cpp Platform/GLFW/TimeGLFWAdapter.h)
 add_library(Engine SHARED ${SOURCE_FILES})
 
 add_subdirectory(Platform/Dependencies/glfw)
